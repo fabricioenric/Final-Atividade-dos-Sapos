@@ -9,19 +9,44 @@ void Sapos::setQtd(int q){
     qtd = q;
 }
 
-Sapos::Sapos(int identificador){
+double Frogs::getIntensidade(){
+    return intensidade;
+}
 
-       tipo = identificador;
+void Frogs::setIntensidade(double intens){
+    intensidade = intens;
+}
 
-       if(tipo == 1){
+Sapos::Sapos(int identificador1){
+
+       tipo1 = identificador1;
+
+       if(tipo1 == 1){
          setQtd(50);
        }
 
-       else if(tipo == 2){
+       else if(tipo1 == 2){
          setQtd(50);
        }
 
-       else if(tipo == 3){
+       else if(tipo1 == 3){
          setQtd(50);
+       }
+}
+
+Frogs::Frogs(int identificador2){
+
+       tipo2 = identificador2;
+
+       if(tipo2 == 1){
+         setIntensidade(1.5);
+       }
+
+       else if(tipo2 == 2){
+         setIntensidade(1.5);
+       }
+
+       else if(tipo2 == 3){
+         setIntensidade(1.5);
        }
 }
