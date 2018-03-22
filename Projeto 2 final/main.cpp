@@ -22,10 +22,14 @@ int main(){
     Sapos *s2 = new Sapos(2);
     Sapos *s3 = new Sapos(3);
 
+    Frogs *p1 = new Frogs(1);
+    Frogs *p2 = new Frogs(2);
+    Frogs *p3 = new Frogs(3);
+
     cout << "" << endl;
-    cout << "Com um numero de " <<s1->getQtd() << ", o sapo " << sapo1 << " percorre, " << s1->getQtd() << " unidades de distancia por pulo" << endl;
-    cout << "Com um numero de " <<s2->getQtd() << ", o sapo " << sapo2 << " percorre, " << s2->getQtd() << " unidades de distancia por pulo" << endl;
-    cout << "Com um numero de " <<s3->getQtd() << ", o sapo " << sapo3 << " percorre, " << s3->getQtd() << " unidades de distancia por pulo" << endl;
+    cout << "Com um numero de " <<s1->getQtd() << " pulos, e intensidade " << p1->getIntensidade() << ", o sapo " << sapo1 << " percorre, " << s1->getQtd() * p1->getIntensidade() << " unidades de distancia" << endl;
+    cout << "Com um numero de " <<s2->getQtd() << " pulos, e intensidade " << p2->getIntensidade() << ", o sapo " << sapo2 << " percorre, " << s2->getQtd() * p2->getIntensidade() << " unidades de distancia" << endl;
+    cout << "Com um numero de " <<s3->getQtd() << " pulos, e intensidade " << p3->getIntensidade() << ", o sapo " << sapo3 << " percorre, " << s3->getQtd() * p3->getIntensidade() << " unidades de distancia" << endl;
 
     srand(time(0));
     int imprevisto1 = rand() % 80;
@@ -42,15 +46,15 @@ int main(){
 
     for(int i = 0; i <= total; i++){
 
-    percorre1 += s1->getQtd();
-    percorre2 += s2->getQtd();
-    percorre3 += s3->getQtd();
+    percorre1 += (s1->getQtd() * p1->getIntensidade()) - imprevisto1;
+    percorre2 += (s2->getQtd() * p2->getIntensidade()) - imprevisto2;
+    percorre3 += (s3->getQtd() * p3->getIntensidade()) - imprevisto3;
 
     }
 
-    int resultado1 = percorre1 - imprevisto1;
-    int resultado2 = percorre2 - imprevisto2;
-    int resultado3 = percorre3 - imprevisto3;
+    int resultado1 = percorre1;
+    int resultado2 = percorre2;
+    int resultado3 = percorre3;
 
     cout << "" << endl;
     if(resultado1 > resultado2 && resultado1 > resultado3)
@@ -73,7 +77,6 @@ int main(){
 
     else if(resultado1 == resultado2 && resultado1 == resultado3)
         cout << "Resultado: Empate." << endl;
-
 
     return 0;
 }
