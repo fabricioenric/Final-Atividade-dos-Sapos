@@ -1,0 +1,14 @@
+# depslib dependency file v1.0
+1521680162 source:c:\users\fabio\desktop\fim\projeto 2 final\main.cpp
+	<iostream>
+	"classes.hpp"
+	"sapos.cpp"
+	<stdlib.h>
+	<time.h>
+
+1521677906 c:\users\fabio\desktop\fim\projeto 2 final\classes.hpp
+
+1521680196 c:\users\fabio\desktop\fim\projeto 2 final\sapos.cpp
+	<iostream>
+	"classes.hpp"
+
